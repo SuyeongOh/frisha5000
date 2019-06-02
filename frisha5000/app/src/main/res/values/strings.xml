@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">FRiSH-A5000</string>
+    <string-array name="spinner_list_item_array">
+        <item>com1</item>
+        <item>com2</item>
+        <item>com3</item>
+        <item>com4</item>
+    </string-array>
+
+    <string-array name="spinner_list_channel">
+        <item>7A - 175.280</item>
+        <item>7B - 177.008</item>
+        <item>7C - 178.736</item>
+        <item>8A - 181.280</item>
+        <item>8B - 183.008</item>
+        <item>8C - 184.736</item>
+        <item>9A - 187.280</item>
+        <item>9B - 189.008</item>
+        <item>9C - 190.736</item>
+        <item>10A - 193.280</item>
+        <item>10B - 195.008</item>
+        <item>10C - 196.736</item>
+        <item>11A - 199.280</item>
+        <item>11B - 201.008</item>
+        <item>11C - 202.736</item>
+        <item>12A - 205.280</item>
+        <item>12B - 207.008</item>
+        <item>12C - 208.736</item>
+        <item>13A - 211.280</item>
+        <item>13B - 213.008</item>
+        <item>13C - 214.736</item>
+    </string-array>
+
+    <string-array name="spinner_list_fm">
+        <item>88.100</item>
+        <item>88.300</item>
+        <item>88.500</item>
+        <item>88.700</item>
+        <item>88.900</item>
+        <item>89.100</item>
+        <item>89.300</item>
+        <item>89.500</item>
+        <item>89.700</item>
+        <item>89.900</item>
+        <item>90.100</item>
+        <item>90.300</item>
+        <item>90.500</item>
+        <item>90.700</item>
+        <item>90.900</item>
+        <item>91.100</item>
+        <item>91.300</item>
+        <item>91.500</item>
+        <item>91.700</item>
+        <item>91.900</item>
+        <item>92.100</item>
+        <item>92.300</item>
+        <item>92.500</item>
+        <item>92.700</item>
+        <item>92.900</item>
+        <item>93.100</item>
+        <item>93.300</item>
+        <item>93.500</item>
+        <item>93.700</item>
+        <item>93.900</item>
+        <item>94.100</item>
+        <item>94.300</item>
+        <item>94.500</item>
+        <item>94.700</item>
+        <item>94.900</item>
+        <item>95.100</item>
+        <item>95.300</item>
+        <item>95.500</item>
+        <item>95.700</item>
+        <item>95.900</item>
+        <item>96.100</item>
+        <item>96.300</item>
+        <item>96.500</item>
+        <item>96.700</item>
+        <item>96.900</item>
+        <item>97.100</item>
+        <item>97.300</item>
+        <item>97.500</item>
+        <item>97.700</item>
+        <item>97.900</item>
+        <item>98.100</item>
+        <item>98.300</item>
+        <item>98.500</item>
+        <item>98.700</item>
+        <item>98.900</item>
+        <item>99.100</item>
+        <item>99.300</item>
+        <item>99.500</item>
+        <item>99.700</item>
+        <item>99.900</item>
+        <item>100.100</item>
+        <item>100.300</item>
+        <item>100.500</item>
+        <item>100.700</item>
+        <item>100.900</item>
+        <item>101.100</item>
+        <item>101.300</item>
+        <item>101.500</item>
+        <item>101.700</item>
+        <item>101.900</item>
+        <item>102.100</item>
+        <item>102.300</item>
+        <item>102.500</item>
+        <item>102.700</item>
+        <item>102.900</item>
+        <item>103.100</item>
+        <item>103.300</item>
+        <item>103.500</item>
+        <item>103.700</item>
+        <item>103.900</item>
+        <item>104.100</item>
+        <item>104.300</item>
+        <item>104.500</item>
+        <item>104.700</item>
+        <item>104.900</item>
+        <item>105.100</item>
+        <item>105.300</item>
+        <item>105.500</item>
+        <item>105.700</item>
+        <item>105.900</item>
+        <item>106.100</item>
+        <item>106.300</item>
+        <item>106.500</item>
+        <item>106.700</item>
+        <item>106.900</item>
+        <item>107.100</item>
+        <item>107.300</item>
+        <item>107.500</item>
+        <item>107.700</item>
+        <item>107.900</item>
+    </string-array>
+
+
+    <string name="clr">초기화</string>
+</resources>

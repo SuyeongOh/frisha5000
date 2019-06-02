@@ -1,0 +1,1813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:src="@drawable/name" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:text="v5.5"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_dmb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2.5sp"
+            android:layout_weight="2.5"
+            android:background="@drawable/new_r_box_w_border"
+            android:shadowColor="#000000"
+            android:shadowDx="0"
+            android:shadowDy="-1"
+            android:shadowRadius="3"
+            android:text="DMB"
+            android:textAlignment="center"
+            android:textColor="@color/new_white"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/bt_fm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.5sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="2.5"
+            android:background="@drawable/new_b_box_w_border"
+            android:shadowColor="#000000"
+            android:shadowDx="0"
+            android:shadowDy="-1"
+            android:shadowRadius="3"
+            android:text="FM"
+            android:textAlignment="center"
+            android:textColor="@color/new_white"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true">
+
+            <!--
+            Layout DMB
+            Layout device
+            Layout signal
+            Layout display
+            Layout search
+            Layout service
+            -->
+            <LinearLayout
+                android:id="@+id/layout_dmb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:baselineAligned="false">
+
+                <!--
+            Lock Status
+            -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginRight="2.5sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginRight="2.5sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/new_b_box_w_border"
+                            android:shadowColor="#000000"
+                            android:shadowDx="0"
+                            android:shadowDy="-1"
+                            android:shadowRadius="3"
+                            android:text="채널"
+                            android:textColor="@color/new_white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2.5sp"
+                            android:layout_marginRight="2.5sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/new_b_box_w_border"
+                            android:shadowColor="#000000"
+                            android:shadowDx="0"
+                            android:shadowDy="-1"
+                            android:shadowRadius="3"
+                            android:text="채널검색"
+                            android:textColor="@color/new_white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--
+            Tuner Status
+            -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+
+                    <Spinner
+                        android:id="@+id/spin_dmb_ch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="4" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--
+        장비 연결,  DMB신호
+        -->
+            <LinearLayout
+                android:id="@+id/layout_device"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="10sp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="5"
+                        android:text=" "
+                        android:textAlignment="center" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView_dmb_connect"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="12"
+                        android:adjustViewBounds="false"
+                        app:srcCompat="@drawable/off" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="78"
+                        android:paddingLeft="10sp"
+                        android:text="장비 연결"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="5"
+                        android:text=" "
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5sp"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="10sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="5"
+                        android:text=" "
+                        android:textAlignment="center" />
+
+                    <ImageView
+                        android:id="@+id/imageView_dmb_signal"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="12"
+                        app:srcCompat="@drawable/off" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="78"
+                        android:paddingLeft="10sp"
+                        android:paddingStart="10sp"
+                        android:text="DMB 신호"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="5"
+                        android:text=" "
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_signal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0"
+
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10sp"
+                    android:paddingLeft="30sp"
+                    android:paddingTop="10sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="right"
+                        android:text="RSSI :"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_dmb_strength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text=" dBm"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10sp"
+                    android:paddingLeft="30sp"
+                    android:paddingTop="10sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="SNR :"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_dmb_quality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=" dB"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <!--
+        Display
+        -->
+            <LinearLayout
+                android:id="@+id/layout_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <Button
+                        android:id="@+id/bt_dmb_col"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_b_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="성좌도"
+                        android:textAlignment="center"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt_dmb_spec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_b_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="스펙트럼"
+                        android:textAlignment="center"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt_dmb_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_p_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="시작"
+                        android:textAlignment="center"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/dmb_con_graph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dip"
+                    android:layout_margin="5sp" />
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/dmb_spec_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dip"
+                    android:layout_margin="5sp" />
+
+            </LinearLayout>
+            <!--
+            Channel search
+            -->
+            <LinearLayout
+                android:id="@+id/layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:paddingBottom="5sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="5sp">
+
+                    <Button
+                        android:id="@+id/bt_dmb_channel_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_b_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="검색"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt_dmb_channel_search_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_b_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="멈춤"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/dmb_progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5sp">
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="175.280" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="177.008" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="178.736" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5sp">
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="181.280" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="183.008" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="184.736" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5sp">
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="187.280" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="189.008" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="190.736" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5sp">
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="193.280" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="195.008" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="196.736" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5sp">
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="199.280" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="201.008" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="202.736" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5sp">
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="205.280" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="207.008" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="208.736" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="3"
+                        android:paddingTop="5sp">
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="211.280" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="213.008" />
+
+                        <Button
+                            android:id="@+id/bt_dmb_ch21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/y_g_box_dot_border"
+                            android:text="214.736" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_service"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_service_inform"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="8sp"
+                    android:text="서비스 정보"
+                    android:textColor="@color/blueblack" />
+
+                <TextView
+                    android:id="@+id/txt_service_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="38sp"
+                    android:layout_marginTop="20sp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/blueblack"
+                    android:textSize="35sp" />
+            </LinearLayout>
+
+
+
+            <!--
+            구분
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:baselineAligned="false">
+
+                <!--
+            Lock Status
+            -->
+
+                <LinearLayout
+                    android:id="@+id/layout_fm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginRight="2.5sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_fm_ch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginRight="2.5sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/new_b_box_w_border"
+                            android:shadowColor="#000000"
+                            android:shadowDx="0"
+                            android:shadowDy="-1"
+                            android:shadowRadius="3"
+                            android:text="채널"
+                            android:textColor="@color/new_white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/bt_fm_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2.5sp"
+                            android:layout_marginRight="2.5sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/new_b_box_w_border"
+                            android:shadowColor="#000000"
+                            android:shadowDx="0"
+                            android:shadowDy="-1"
+                            android:shadowRadius="3"
+                            android:text="채널검색"
+                            android:textColor="@color/new_white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--
+            Tuner Status
+            -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+
+                    <Spinner
+                        android:id="@+id/spin_fm_ch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="4" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--
+        장비 연결,  DMB신호
+        -->
+            <LinearLayout
+                android:id="@+id/layout_fm_device"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8sp"
+                    android:paddingTop="10sp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="5"
+                        android:text=" "
+                        android:textAlignment="center" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView_fm_connect"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="12"
+                        android:adjustViewBounds="false"
+                        app:srcCompat="@drawable/off" />
+
+                    <TextView
+                        android:id="@+id/fm_textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="2.5sp"
+                        android:layout_weight="78"
+                        android:paddingLeft="10sp"
+                        android:text="장비 연결"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="5"
+                        android:text=" "
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5sp"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8sp"
+                    android:paddingTop="10sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="5"
+                        android:text=" "
+                        android:textAlignment="center" />
+
+                    <ImageView
+                        android:id="@+id/imageView_fm_signal"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="12"
+                        app:srcCompat="@drawable/off" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="78"
+                        android:paddingLeft="10sp"
+                        android:paddingStart="10sp"
+                        android:text="FM 신호"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="5"
+                        android:text=" "
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_fm_signal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0"
+
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout android:orientation="horizontal" android:background="@drawable/border" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="1" android:layout_marginRight="2.5sp" android:paddingTop="10sp" android:paddingBottom="10sp">
+
+                    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="20sp" android:textColor="@color/colorPrimaryDark" android:text="RSSI :" android:layout_weight="1" android:textStyle="bold" android:gravity="right"/>
+
+                    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="20sp" android:textColor="@color/colorPrimaryDark" android:text=" dBm" android:layout_weight="1" android:id="@+id/txt_fm_strength" android:textStyle="bold"/>
+
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:background="@drawable/border" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="1" android:layout_marginLeft="2.5sp" android:paddingTop="10sp" android:paddingBottom="10sp">
+
+                    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="20sp" android:textColor="@color/colorPrimaryDark" android:text="SNR :" android:layout_weight="1" android:textStyle="bold" android:gravity="right"/>
+
+                    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="20sp" android:textColor="@color/colorPrimaryDark" android:text=" dB" android:layout_weight="1" android:id="@+id/txt_fm_quality" android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--
+        Display
+        -->
+
+            <LinearLayout
+                android:id="@+id/layout_fm_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <Button
+                        android:id="@+id/bt_fm_col"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_b_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="성좌도"
+                        android:textAlignment="center"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt_fm_spec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_b_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="스펙트럼"
+                        android:textAlignment="center"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt_fm_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_p_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="시작"
+                        android:textAlignment="center"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/fm_con_graph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dip"
+                    android:layout_margin="5sp" />
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/fm_spec_graph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dip"
+                    android:layout_margin="5sp" />
+            </LinearLayout>
+
+            <!--
+            Channel search
+            -->
+            <LinearLayout
+                android:id="@+id/layout_fm_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:paddingBottom="5sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="5sp">
+
+                    <Button
+                        android:id="@+id/bt_fm_channel_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_b_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="검색"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt_fm_channel_search_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_b_box_w_border"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="-1"
+                        android:shadowRadius="3"
+                        android:text="멈춤"
+                        android:textColor="@color/new_white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/fm_progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch15"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch17"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch18"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch19"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch21"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch22"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch23"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch25"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch26"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch27"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch28"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch29"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch30"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch31"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch32"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch34"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch35"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch36"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch37"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch38"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch39"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch40"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch41"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch42"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch43"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch44"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch45"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch46"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch47"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch48"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch49"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch50"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch51"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch52"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch53"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch54"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch55"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch56"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5sp">
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch57"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch58"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+
+                                <Button
+                                    android:id="@+id/bt_fm_ch59"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                                <Button
+                                    android:id="@+id/bt_fm_ch60"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/y_g_box_dot_border" />
+                            </TableRow>
+
+
+
+
+
+
+
+
+                        </TableLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
